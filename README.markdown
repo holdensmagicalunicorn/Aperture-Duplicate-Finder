@@ -36,7 +36,7 @@ The file finds all master images by reading the private and not-to-be-accessed-b
 
 It then enumerates over each image file, loading it into memory into a known image format (8-bit RGBA) and produces a MD5 hash for the pixel data. The hashes are then used to find duplicate images.
 
-Each image that is a duplicate is then tagged as such.
+Each image that is a duplicate is then tagged as such with the keyword "x-duplicate" (currently broken).
 
 ## Performance
 
@@ -45,3 +45,7 @@ Much of the code has been made multiprocessor happy with the use of GCD. While r
 ## Testing
 
 Don't run this on your full Aperture library. That's nuts. Find an album or project that you know contains duplicates and then export that into a new library.
+
+## Bugs
+
+Setting the keyword seems to work, but the keyword is not visible inside Aperture itself. What the hell?

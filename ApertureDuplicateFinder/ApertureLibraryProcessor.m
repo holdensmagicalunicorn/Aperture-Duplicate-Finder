@@ -306,9 +306,34 @@
                 ApertureImageVersion *theVersion = [theApplication.imageVersions objectWithID:theImage.originalVersionUUID];
                 theVersion = [theVersion get];
                 NSLog(@"%@ -> %@", theImage.UUID, theVersion.name);
-                
-                
-                
+
+                NSLog(@"%@", [theVersion.keywords valueForKey:@"name"]);
+
+                NSDictionary *theProperties = [NSDictionary dictionaryWithObjectsAndKeys:
+                    @"x-duplicate", @"name",
+                    NULL];
+                ApertureKeyword *theKeyword = [[[theApplication classForScriptingClass:@"keyword"] alloc] initWithProperties:theProperties];
+//                [theVersion.keywords get];
+                [theVersion.keywords addObject:theKeyword];
+
+                NSLog(@"%@", [theVersion.keywords valueForKey:@"name"]);
+
+//                NSLog(@"%@", [theKeyword lastError]);
+//                NSLog(@"%@", [theVersion lastError]);
+//                
+//                NSLog(@"%@", [theVersion.keywords get]);
+//
+//                theProperties = [NSDictionary dictionaryWithObjectsAndKeys:
+//                    @"MD5", @"name",
+//                    @"something", @"value",
+//                    NULL];
+//
+////                ApertureCustomTag *theTag = [[[theApplication classForScriptingClass:@"custom tag"] alloc] initWithProperties:theProperties];
+////                [theVersion.customTags addObject:theTag];
+//
+//                NSLog(@"%@", [theVersion.customTags get]);
+
+
                 }
             
 //            NSLog(@"%@", obj);
