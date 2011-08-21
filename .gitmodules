@@ -1,0 +1,3 @@
+[submodule "Externals/TouchSQL"]
+	path = Externals/TouchSQL
+	url = git://github.com/TouchCode/TouchSQL.git

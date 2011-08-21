@@ -1,0 +1,564 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		454CAA8014009B1D00B0CFA3 /* CSqliteDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 454CAA5914009B1D00B0CFA3 /* CSqliteDatabase.m */; };
+		454CAA8114009B1D00B0CFA3 /* CSqliteDatabase_Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 454CAA5B14009B1D00B0CFA3 /* CSqliteDatabase_Extensions.m */; };
+		454CAA8214009B1D00B0CFA3 /* CSqliteDatabase_Functions.m in Sources */ = {isa = PBXBuildFile; fileRef = 454CAA5D14009B1D00B0CFA3 /* CSqliteDatabase_Functions.m */; };
+		454CAA8314009B1D00B0CFA3 /* CSqliteEnumerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 454CAA5F14009B1D00B0CFA3 /* CSqliteEnumerator.m */; };
+		454CAA8414009B1D00B0CFA3 /* CSqliteRow.m in Sources */ = {isa = PBXBuildFile; fileRef = 454CAA6114009B1D00B0CFA3 /* CSqliteRow.m */; };
+		454CAA8514009B1D00B0CFA3 /* CSqliteStatement.m in Sources */ = {isa = PBXBuildFile; fileRef = 454CAA6314009B1D00B0CFA3 /* CSqliteStatement.m */; };
+		454CAA8614009B1D00B0CFA3 /* NSArray_SqlExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 454CAA6614009B1D00B0CFA3 /* NSArray_SqlExtensions.m */; };
+		454CAA8714009B1D00B0CFA3 /* NSDate_SqlExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 454CAA6814009B1D00B0CFA3 /* NSDate_SqlExtension.m */; };
+		454CAA8814009B1D00B0CFA3 /* NSString_SqlExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 454CAA6A14009B1D00B0CFA3 /* NSString_SqlExtensions.m */; };
+		4566E9B913FC810200EED05E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4566E9B813FC810200EED05E /* Cocoa.framework */; };
+		4566E9C313FC810200EED05E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4566E9C113FC810200EED05E /* InfoPlist.strings */; };
+		4566E9C513FC810200EED05E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4566E9C413FC810200EED05E /* main.m */; };
+		4566E9C913FC810200EED05E /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 4566E9C713FC810200EED05E /* Credits.rtf */; };
+		4566E9CC13FC810200EED05E /* CAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4566E9CB13FC810200EED05E /* CAppDelegate.m */; };
+		4566E9CF13FC810200EED05E /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4566E9CD13FC810200EED05E /* MainMenu.xib */; };
+		4566E9D713FC810200EED05E /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4566E9D613FC810200EED05E /* SenTestingKit.framework */; };
+		4566E9D813FC810200EED05E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4566E9B813FC810200EED05E /* Cocoa.framework */; };
+		4566E9E013FC810200EED05E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4566E9DE13FC810200EED05E /* InfoPlist.strings */; };
+		4566E9E313FC810200EED05E /* ApertureDuplicateFinderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4566E9E213FC810200EED05E /* ApertureDuplicateFinderTests.m */; };
+		4566EAA313FC881B00EED05E /* ApertureLibraryProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4566EAA213FC881B00EED05E /* ApertureLibraryProcessor.m */; };
+		45B2589A1400536D00966694 /* CApertureImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 45B258991400536D00966694 /* CApertureImage.m */; };
+		45DC71A1140085AB00F200CE /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45DC71A0140085AB00F200CE /* ScriptingBridge.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4566E9D913FC810200EED05E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4566E9AB13FC810200EED05E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4566E9B313FC810200EED05E;
+			remoteInfo = ApertureDuplicateFinder;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		454CAA5814009B1D00B0CFA3 /* CSqliteDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSqliteDatabase.h; sourceTree = "<group>"; };
+		454CAA5914009B1D00B0CFA3 /* CSqliteDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSqliteDatabase.m; sourceTree = "<group>"; };
+		454CAA5A14009B1D00B0CFA3 /* CSqliteDatabase_Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSqliteDatabase_Extensions.h; sourceTree = "<group>"; };
+		454CAA5B14009B1D00B0CFA3 /* CSqliteDatabase_Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSqliteDatabase_Extensions.m; sourceTree = "<group>"; };
+		454CAA5C14009B1D00B0CFA3 /* CSqliteDatabase_Functions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSqliteDatabase_Functions.h; sourceTree = "<group>"; };
+		454CAA5D14009B1D00B0CFA3 /* CSqliteDatabase_Functions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSqliteDatabase_Functions.m; sourceTree = "<group>"; };
+		454CAA5E14009B1D00B0CFA3 /* CSqliteEnumerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSqliteEnumerator.h; sourceTree = "<group>"; };
+		454CAA5F14009B1D00B0CFA3 /* CSqliteEnumerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSqliteEnumerator.m; sourceTree = "<group>"; };
+		454CAA6014009B1D00B0CFA3 /* CSqliteRow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSqliteRow.h; sourceTree = "<group>"; };
+		454CAA6114009B1D00B0CFA3 /* CSqliteRow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSqliteRow.m; sourceTree = "<group>"; };
+		454CAA6214009B1D00B0CFA3 /* CSqliteStatement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSqliteStatement.h; sourceTree = "<group>"; };
+		454CAA6314009B1D00B0CFA3 /* CSqliteStatement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSqliteStatement.m; sourceTree = "<group>"; };
+		454CAA6514009B1D00B0CFA3 /* NSArray_SqlExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSArray_SqlExtensions.h; sourceTree = "<group>"; };
+		454CAA6614009B1D00B0CFA3 /* NSArray_SqlExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArray_SqlExtensions.m; sourceTree = "<group>"; };
+		454CAA6714009B1D00B0CFA3 /* NSDate_SqlExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDate_SqlExtension.h; sourceTree = "<group>"; };
+		454CAA6814009B1D00B0CFA3 /* NSDate_SqlExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDate_SqlExtension.m; sourceTree = "<group>"; };
+		454CAA6914009B1D00B0CFA3 /* NSString_SqlExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSString_SqlExtensions.h; sourceTree = "<group>"; };
+		454CAA6A14009B1D00B0CFA3 /* NSString_SqlExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSString_SqlExtensions.m; sourceTree = "<group>"; };
+		454CAA6B14009B1D00B0CFA3 /* TouchSQL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchSQL.h; sourceTree = "<group>"; };
+		4566E9B413FC810200EED05E /* ApertureDuplicateFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ApertureDuplicateFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4566E9B813FC810200EED05E /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		4566E9BB13FC810200EED05E /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		4566E9BC13FC810200EED05E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		4566E9BD13FC810200EED05E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4566E9C013FC810200EED05E /* ApertureDuplicateFinder-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ApertureDuplicateFinder-Info.plist"; sourceTree = "<group>"; };
+		4566E9C213FC810200EED05E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4566E9C413FC810200EED05E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4566E9C613FC810200EED05E /* ApertureDuplicateFinder-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ApertureDuplicateFinder-Prefix.pch"; sourceTree = "<group>"; };
+		4566E9C813FC810200EED05E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		4566E9CA13FC810200EED05E /* CAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAppDelegate.h; sourceTree = "<group>"; };
+		4566E9CB13FC810200EED05E /* CAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CAppDelegate.m; sourceTree = "<group>"; };
+		4566E9CE13FC810200EED05E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		4566E9D513FC810200EED05E /* ApertureDuplicateFinderTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ApertureDuplicateFinderTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4566E9D613FC810200EED05E /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		4566E9DD13FC810200EED05E /* ApertureDuplicateFinderTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ApertureDuplicateFinderTests-Info.plist"; sourceTree = "<group>"; };
+		4566E9DF13FC810200EED05E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4566E9E113FC810200EED05E /* ApertureDuplicateFinderTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApertureDuplicateFinderTests.h; sourceTree = "<group>"; };
+		4566E9E213FC810200EED05E /* ApertureDuplicateFinderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApertureDuplicateFinderTests.m; sourceTree = "<group>"; };
+		4566EAA113FC881B00EED05E /* ApertureLibraryProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApertureLibraryProcessor.h; sourceTree = "<group>"; };
+		4566EAA213FC881B00EED05E /* ApertureLibraryProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApertureLibraryProcessor.m; sourceTree = "<group>"; };
+		45B258981400536D00966694 /* CApertureImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CApertureImage.h; sourceTree = "<group>"; };
+		45B258991400536D00966694 /* CApertureImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CApertureImage.m; sourceTree = "<group>"; };
+		45DC719E140084DF00F200CE /* Aperture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Aperture.h; sourceTree = "<group>"; };
+		45DC71A0140085AB00F200CE /* ScriptingBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScriptingBridge.framework; path = System/Library/Frameworks/ScriptingBridge.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4566E9B113FC810200EED05E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45DC71A1140085AB00F200CE /* ScriptingBridge.framework in Frameworks */,
+				4566E9B913FC810200EED05E /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4566E9D113FC810200EED05E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4566E9D713FC810200EED05E /* SenTestingKit.framework in Frameworks */,
+				4566E9D813FC810200EED05E /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		454CAA4914009B1D00B0CFA3 /* Externals */ = {
+			isa = PBXGroup;
+			children = (
+				454CAA4A14009B1D00B0CFA3 /* TouchSQL */,
+			);
+			path = Externals;
+			sourceTree = "<group>";
+		};
+		454CAA4A14009B1D00B0CFA3 /* TouchSQL */ = {
+			isa = PBXGroup;
+			children = (
+				454CAA5714009B1D00B0CFA3 /* Source */,
+			);
+			path = TouchSQL;
+			sourceTree = "<group>";
+		};
+		454CAA5714009B1D00B0CFA3 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				454CAA5814009B1D00B0CFA3 /* CSqliteDatabase.h */,
+				454CAA5914009B1D00B0CFA3 /* CSqliteDatabase.m */,
+				454CAA5A14009B1D00B0CFA3 /* CSqliteDatabase_Extensions.h */,
+				454CAA5B14009B1D00B0CFA3 /* CSqliteDatabase_Extensions.m */,
+				454CAA5C14009B1D00B0CFA3 /* CSqliteDatabase_Functions.h */,
+				454CAA5D14009B1D00B0CFA3 /* CSqliteDatabase_Functions.m */,
+				454CAA5E14009B1D00B0CFA3 /* CSqliteEnumerator.h */,
+				454CAA5F14009B1D00B0CFA3 /* CSqliteEnumerator.m */,
+				454CAA6014009B1D00B0CFA3 /* CSqliteRow.h */,
+				454CAA6114009B1D00B0CFA3 /* CSqliteRow.m */,
+				454CAA6214009B1D00B0CFA3 /* CSqliteStatement.h */,
+				454CAA6314009B1D00B0CFA3 /* CSqliteStatement.m */,
+				454CAA6414009B1D00B0CFA3 /* Support */,
+				454CAA6B14009B1D00B0CFA3 /* TouchSQL.h */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		454CAA6414009B1D00B0CFA3 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				454CAA6514009B1D00B0CFA3 /* NSArray_SqlExtensions.h */,
+				454CAA6614009B1D00B0CFA3 /* NSArray_SqlExtensions.m */,
+				454CAA6714009B1D00B0CFA3 /* NSDate_SqlExtension.h */,
+				454CAA6814009B1D00B0CFA3 /* NSDate_SqlExtension.m */,
+				454CAA6914009B1D00B0CFA3 /* NSString_SqlExtensions.h */,
+				454CAA6A14009B1D00B0CFA3 /* NSString_SqlExtensions.m */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		4566E9A913FC810200EED05E = {
+			isa = PBXGroup;
+			children = (
+				4566E9BE13FC810200EED05E /* ApertureDuplicateFinder */,
+				4566E9DB13FC810200EED05E /* ApertureDuplicateFinderTests */,
+				4566E9B713FC810200EED05E /* Frameworks */,
+				454CAA4914009B1D00B0CFA3 /* Externals */,
+				4566E9B513FC810200EED05E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4566E9B513FC810200EED05E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4566E9B413FC810200EED05E /* ApertureDuplicateFinder.app */,
+				4566E9D513FC810200EED05E /* ApertureDuplicateFinderTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4566E9B713FC810200EED05E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				45DC71A0140085AB00F200CE /* ScriptingBridge.framework */,
+				4566E9B813FC810200EED05E /* Cocoa.framework */,
+				4566E9D613FC810200EED05E /* SenTestingKit.framework */,
+				4566E9BA13FC810200EED05E /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4566E9BA13FC810200EED05E /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4566E9BB13FC810200EED05E /* AppKit.framework */,
+				4566E9BC13FC810200EED05E /* CoreData.framework */,
+				4566E9BD13FC810200EED05E /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		4566E9BE13FC810200EED05E /* ApertureDuplicateFinder */ = {
+			isa = PBXGroup;
+			children = (
+				4566E9CA13FC810200EED05E /* CAppDelegate.h */,
+				4566E9CB13FC810200EED05E /* CAppDelegate.m */,
+				4566EAA113FC881B00EED05E /* ApertureLibraryProcessor.h */,
+				4566EAA213FC881B00EED05E /* ApertureLibraryProcessor.m */,
+				45B258981400536D00966694 /* CApertureImage.h */,
+				45B258991400536D00966694 /* CApertureImage.m */,
+				45DC719E140084DF00F200CE /* Aperture.h */,
+				4566E9CD13FC810200EED05E /* MainMenu.xib */,
+				4566E9BF13FC810200EED05E /* Supporting Files */,
+			);
+			path = ApertureDuplicateFinder;
+			sourceTree = "<group>";
+		};
+		4566E9BF13FC810200EED05E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4566E9C013FC810200EED05E /* ApertureDuplicateFinder-Info.plist */,
+				4566E9C113FC810200EED05E /* InfoPlist.strings */,
+				4566E9C413FC810200EED05E /* main.m */,
+				4566E9C613FC810200EED05E /* ApertureDuplicateFinder-Prefix.pch */,
+				4566E9C713FC810200EED05E /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4566E9DB13FC810200EED05E /* ApertureDuplicateFinderTests */ = {
+			isa = PBXGroup;
+			children = (
+				4566E9E113FC810200EED05E /* ApertureDuplicateFinderTests.h */,
+				4566E9E213FC810200EED05E /* ApertureDuplicateFinderTests.m */,
+				4566E9DC13FC810200EED05E /* Supporting Files */,
+			);
+			path = ApertureDuplicateFinderTests;
+			sourceTree = "<group>";
+		};
+		4566E9DC13FC810200EED05E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4566E9DD13FC810200EED05E /* ApertureDuplicateFinderTests-Info.plist */,
+				4566E9DE13FC810200EED05E /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4566E9B313FC810200EED05E /* ApertureDuplicateFinder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4566E9E613FC810200EED05E /* Build configuration list for PBXNativeTarget "ApertureDuplicateFinder" */;
+			buildPhases = (
+				4566E9B013FC810200EED05E /* Sources */,
+				4566E9B113FC810200EED05E /* Frameworks */,
+				4566E9B213FC810200EED05E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ApertureDuplicateFinder;
+			productName = ApertureDuplicateFinder;
+			productReference = 4566E9B413FC810200EED05E /* ApertureDuplicateFinder.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4566E9D413FC810200EED05E /* ApertureDuplicateFinderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4566E9E913FC810200EED05E /* Build configuration list for PBXNativeTarget "ApertureDuplicateFinderTests" */;
+			buildPhases = (
+				4566E9D013FC810200EED05E /* Sources */,
+				4566E9D113FC810200EED05E /* Frameworks */,
+				4566E9D213FC810200EED05E /* Resources */,
+				4566E9D313FC810200EED05E /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4566E9DA13FC810200EED05E /* PBXTargetDependency */,
+			);
+			name = ApertureDuplicateFinderTests;
+			productName = ApertureDuplicateFinderTests;
+			productReference = 4566E9D513FC810200EED05E /* ApertureDuplicateFinderTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4566E9AB13FC810200EED05E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = toxicsoftware.com;
+			};
+			buildConfigurationList = 4566E9AE13FC810200EED05E /* Build configuration list for PBXProject "ApertureDuplicateFinder" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				English,
+			);
+			mainGroup = 4566E9A913FC810200EED05E;
+			productRefGroup = 4566E9B513FC810200EED05E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4566E9B313FC810200EED05E /* ApertureDuplicateFinder */,
+				4566E9D413FC810200EED05E /* ApertureDuplicateFinderTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4566E9B213FC810200EED05E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4566E9C313FC810200EED05E /* InfoPlist.strings in Resources */,
+				4566E9C913FC810200EED05E /* Credits.rtf in Resources */,
+				4566E9CF13FC810200EED05E /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4566E9D213FC810200EED05E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4566E9E013FC810200EED05E /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4566E9D313FC810200EED05E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4566E9B013FC810200EED05E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4566E9C513FC810200EED05E /* main.m in Sources */,
+				4566E9CC13FC810200EED05E /* CAppDelegate.m in Sources */,
+				4566EAA313FC881B00EED05E /* ApertureLibraryProcessor.m in Sources */,
+				45B2589A1400536D00966694 /* CApertureImage.m in Sources */,
+				454CAA8014009B1D00B0CFA3 /* CSqliteDatabase.m in Sources */,
+				454CAA8114009B1D00B0CFA3 /* CSqliteDatabase_Extensions.m in Sources */,
+				454CAA8214009B1D00B0CFA3 /* CSqliteDatabase_Functions.m in Sources */,
+				454CAA8314009B1D00B0CFA3 /* CSqliteEnumerator.m in Sources */,
+				454CAA8414009B1D00B0CFA3 /* CSqliteRow.m in Sources */,
+				454CAA8514009B1D00B0CFA3 /* CSqliteStatement.m in Sources */,
+				454CAA8614009B1D00B0CFA3 /* NSArray_SqlExtensions.m in Sources */,
+				454CAA8714009B1D00B0CFA3 /* NSDate_SqlExtension.m in Sources */,
+				454CAA8814009B1D00B0CFA3 /* NSString_SqlExtensions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4566E9D013FC810200EED05E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4566E9E313FC810200EED05E /* ApertureDuplicateFinderTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4566E9DA13FC810200EED05E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4566E9B313FC810200EED05E /* ApertureDuplicateFinder */;
+			targetProxy = 4566E9D913FC810200EED05E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4566E9C113FC810200EED05E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4566E9C213FC810200EED05E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		4566E9C713FC810200EED05E /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4566E9C813FC810200EED05E /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		4566E9CD13FC810200EED05E /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4566E9CE13FC810200EED05E /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		4566E9DE13FC810200EED05E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4566E9DF13FC810200EED05E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4566E9E413FC810200EED05E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		4566E9E513FC810200EED05E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		4566E9E713FC810200EED05E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ApertureDuplicateFinder/ApertureDuplicateFinder-Prefix.pch";
+				INFOPLIST_FILE = "ApertureDuplicateFinder/ApertureDuplicateFinder-Info.plist";
+				OTHER_LDFLAGS = "-lsqlite3";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		4566E9E813FC810200EED05E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ApertureDuplicateFinder/ApertureDuplicateFinder-Prefix.pch";
+				INFOPLIST_FILE = "ApertureDuplicateFinder/ApertureDuplicateFinder-Info.plist";
+				OTHER_LDFLAGS = "-lsqlite3";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		4566E9EA13FC810200EED05E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ApertureDuplicateFinder.app/Contents/MacOS/ApertureDuplicateFinder";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ApertureDuplicateFinder/ApertureDuplicateFinder-Prefix.pch";
+				INFOPLIST_FILE = "ApertureDuplicateFinderTests/ApertureDuplicateFinderTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		4566E9EB13FC810200EED05E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ApertureDuplicateFinder.app/Contents/MacOS/ApertureDuplicateFinder";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ApertureDuplicateFinder/ApertureDuplicateFinder-Prefix.pch";
+				INFOPLIST_FILE = "ApertureDuplicateFinderTests/ApertureDuplicateFinderTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4566E9AE13FC810200EED05E /* Build configuration list for PBXProject "ApertureDuplicateFinder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4566E9E413FC810200EED05E /* Debug */,
+				4566E9E513FC810200EED05E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4566E9E613FC810200EED05E /* Build configuration list for PBXNativeTarget "ApertureDuplicateFinder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4566E9E713FC810200EED05E /* Debug */,
+				4566E9E813FC810200EED05E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4566E9E913FC810200EED05E /* Build configuration list for PBXNativeTarget "ApertureDuplicateFinderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4566E9EA13FC810200EED05E /* Debug */,
+				4566E9EB13FC810200EED05E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4566E9AB13FC810200EED05E /* Project object */;
+}
