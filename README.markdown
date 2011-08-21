@@ -20,6 +20,14 @@ Before you try to compile the software read all of this README.
 
 Don't forget to do a submodule update after cloning this repository.
 
+## Usage
+
+Before you try to use the software read all of this README.
+
+Run the app, use the "Choose" button to select an Aperture library file (.aplibrary). Click "Start". The app will quit Aperture if it's already running, scan for duplicates, re-launch Aperture and then mark all duplicate images with the "x-duplicate" keyword.
+
+Important!!! Make sure the Aperture library you want to process is the last Aperture library open before running this tool.
+
 ## Danger!!!
 
 This tool reads files inside the aperture library bundle. This is not recommended by Apple. As far as I know the only legitimate way to access Aperture photos from a 3rd party app is via AppleScript - this has various issues, foremost of which is performance.
