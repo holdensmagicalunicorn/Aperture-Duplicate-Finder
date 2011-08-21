@@ -109,8 +109,8 @@
     dispatch_group_async(theGroup, theGlobalQueue, ^{
         
         // Get all images from the Aperture Library
-//        NSString *theStatementString = @"SELECT * FROM RKMaster";
-        NSString *theStatementString = @"SELECT * FROM RKMaster LIMIT 100";
+        NSString *theStatementString = @"SELECT * FROM RKMaster";
+//        NSString *theStatementString = @"SELECT * FROM RKMaster LIMIT 100";
         CSqliteStatement *theStatement = [theDatabase statementWithString:theStatementString];
         [theStatement enumerateObjectsWithOptions:NSEnumerationConcurrent usingBlock:^(CSqliteRow *row, NSUInteger idx, BOOL *stop) {
             
