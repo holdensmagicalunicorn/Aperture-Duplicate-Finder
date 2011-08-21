@@ -54,3 +54,9 @@ Much of the code has been made multiprocessor happy with the use of GCD. While r
 
 Don't run this on your full Aperture library. That's nuts. Find an album or project that you know contains duplicates and then export that into a new library.
 
+## BUGS/TODO
+
+* Need to store the image digests so that we dont have to regenerate them for _all_ images _every_ run. This will allow the user to quit whenever he/she wants.
+* Need to have a UI to show the duplicates and give the user the option to bail before we touch the library.
+* Make sure i know what I'm doign with the version vs master stuff.
+
