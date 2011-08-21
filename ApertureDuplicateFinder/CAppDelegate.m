@@ -41,7 +41,8 @@
             return;
             }
 
-        self.processor.libraryURL = theOpenPanel.URL;
+        self.processor = [[ApertureLibraryProcessor alloc] initWithLibraryURL:theOpenPanel.URL];
+
         
         [[NSUserDefaults standardUserDefaults] setURL:theOpenPanel.URL forKey:@"LibraryURL"];
         [[NSUserDefaults standardUserDefaults] synchronize];
