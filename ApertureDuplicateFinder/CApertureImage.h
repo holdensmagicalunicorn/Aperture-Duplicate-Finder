@@ -10,11 +10,12 @@
 
 @interface CApertureImage : NSObject
 
+@property (readwrite, nonatomic, copy) NSString *modelID;
 @property (readwrite, nonatomic, copy) NSString *UUID;
 @property (readwrite, nonatomic, copy) NSString *path;
 @property (readwrite, nonatomic, copy) NSData *digest;
 @property (readwrite, nonatomic, copy) NSString *type;
-@property (readwrite, nonatomic, copy) NSString *originalVersionUUID;
+@property (readwrite, nonatomic, copy) NSArray *versionUUIDs;
 
 
 @end

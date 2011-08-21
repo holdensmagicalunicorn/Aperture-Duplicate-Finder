@@ -10,11 +10,12 @@
 
 @implementation CApertureImage
 
+@synthesize modelID;
 @synthesize UUID;
 @synthesize path;
 @synthesize digest;
 @synthesize type;
-@synthesize originalVersionUUID;
+@synthesize versionUUIDs;
 
 - (NSString *)description
     {

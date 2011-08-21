@@ -23,6 +23,7 @@
 @property (readwrite, nonatomic, assign) CFAbsoluteTime finish;
 @property (readwrite, nonatomic, assign) CFAbsoluteTime estimatedTimeRemaining;
 
+@property (readwrite, nonatomic, strong) CSqliteDatabase *database;
 @property (readwrite, nonatomic, assign) CGColorSpaceRef colorSpace;
 @property (readwrite, nonatomic, strong) NSMutableDictionary *imagesByUUID;
 
@@ -44,6 +45,7 @@
 @synthesize finish;
 @synthesize estimatedTimeRemaining;
 
+@synthesize database;
 @synthesize colorSpace;
 @synthesize imagesByUUID;
 
@@ -54,7 +56,15 @@
         libraryURL = inLibraryURL;
         imagesByUUID = [[NSMutableDictionary alloc] init];
         
+        
+        NSURL *theDatabaseURL = [self.libraryURL URLByAppendingPathComponent:@"Database/Library.apdb"];
+        
+        // Open the aperture library
+        NSError *theError = NULL;
+        database = [[CSqliteDatabase alloc] initWithURL:theDatabaseURL flags:SQLITE_OPEN_READONLY error:&theError];
+
         colorSpace = CGColorSpaceCreateWithName(kCGColorSpaceGenericRGB);
+
         }
     return self;
     }
@@ -87,21 +97,8 @@
     
     self.processing = YES;
     
-    NSURL *theDatabaseURL = [self.libraryURL URLByAppendingPathComponent:@"Database/Library.apdb"];
     NSURL *theMastersURL = [self.libraryURL URLByAppendingPathComponent:@"Masters"];
     
-    // Open the aperture library
-    NSError *theError = NULL;
-    CSqliteDatabase *theDatabase = [[CSqliteDatabase alloc] initWithURL:theDatabaseURL flags:SQLITE_OPEN_READONLY error:&theError];
-    if (theDatabase == NULL)
-        {
-        if (outError)
-            {
-            *outError = theError;
-            }
-        return(NO);
-        }
-
     dispatch_group_t theGroup = dispatch_group_create();
     dispatch_queue_t theSerialQueue = dispatch_queue_create("com.toxicsoftware.some_queue", DISPATCH_QUEUE_SERIAL);
     dispatch_queue_t theGlobalQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
@@ -111,7 +108,7 @@
         // Get all images from the Aperture Library
         NSString *theStatementString = @"SELECT * FROM RKMaster";
 //        NSString *theStatementString = @"SELECT * FROM RKMaster LIMIT 100";
-        CSqliteStatement *theStatement = [theDatabase statementWithString:theStatementString];
+        CSqliteStatement *theStatement = [self.database statementWithString:theStatementString];
         [theStatement enumerateObjectsWithOptions:NSEnumerationConcurrent usingBlock:^(CSqliteRow *row, NSUInteger idx, BOOL *stop) {
             
             NSString *thePath = [row objectForKey:@"imagePath"];
@@ -137,10 +134,11 @@
                 if (theApertureImage == NULL)
                     {
                     theApertureImage = [[CApertureImage alloc] init];
+                    theApertureImage.modelID = [row objectForKey:@"modelId"];
                     theApertureImage.UUID = theUUID;
                     theApertureImage.path = thePath;
                     theApertureImage.type = theType;
-                    theApertureImage.originalVersionUUID = [row objectForKey:@"originalVersionUuid"];
+//                    theApertureImage.originalVersionUUID = [row objectForKey:@"originalVersionUuid"];
                     [self.imagesByUUID setObject:theApertureImage forKey:theUUID];
                     }
                 });
@@ -288,61 +286,60 @@
         [theImages addObject:theImage];
         }
 
-    ApertureApplication *theApplication = [SBApplication applicationWithBundleIdentifier:@"com.apple.Aperture"];
-    if (theApplication.isRunning == NO)
-        {
-        [theApplication activate];
-        }
-    
         
                     
     NSMutableSet *theDuplicateDigests = [NSMutableSet set];
+    
     [theImagesByDigest enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
         if ([obj count] > 1)
             {
             [theDuplicateDigests addObject:key];
             for (CApertureImage *theImage in obj)
                 {
-                ApertureImageVersion *theVersion = [theApplication.imageVersions objectWithID:theImage.originalVersionUUID];
-                theVersion = [theVersion get];
-                NSLog(@"%@ -> %@", theImage.UUID, theVersion.name);
+                CSqliteStatement *theStatement = [self.database statementWithFormat:@"SELECT * FROM RKVersion WHERE masterId == '%@' ORDER BY 'versionNumber'", theImage.modelID];
+                NSError *theError = NULL;
+                NSArray *theRows = [theStatement rows:&theError];
 
-                NSLog(@"%@", [theVersion.keywords valueForKey:@"name"]);
-
-                NSDictionary *theProperties = [NSDictionary dictionaryWithObjectsAndKeys:
-                    @"x-duplicate", @"name",
-                    NULL];
-                ApertureKeyword *theKeyword = [[[theApplication classForScriptingClass:@"keyword"] alloc] initWithProperties:theProperties];
-//                [theVersion.keywords get];
-                [theVersion.keywords addObject:theKeyword];
-
-                NSLog(@"%@", [theVersion.keywords valueForKey:@"name"]);
-
-//                NSLog(@"%@", [theKeyword lastError]);
-//                NSLog(@"%@", [theVersion lastError]);
-//                
-//                NSLog(@"%@", [theVersion.keywords get]);
-//
-//                theProperties = [NSDictionary dictionaryWithObjectsAndKeys:
-//                    @"MD5", @"name",
-//                    @"something", @"value",
-//                    NULL];
-//
-////                ApertureCustomTag *theTag = [[[theApplication classForScriptingClass:@"custom tag"] alloc] initWithProperties:theProperties];
-////                [theVersion.customTags addObject:theTag];
-//
-//                NSLog(@"%@", [theVersion.customTags get]);
-
-
+                theImage.versionUUIDs = [theRows valueForKey:@"uuid"];
                 }
             
-//            NSLog(@"%@", obj);
             }
         }];
     NSLog(@"%lu", [theDuplicateDigests count]);
-    
-    
-    
+
+    self.database = NULL;
+
+    ApertureApplication *theApplication = [SBApplication applicationWithBundleIdentifier:@"com.apple.Aperture"];
+    if (theApplication.isRunning == NO)
+        {
+        [theApplication activate];
+        }
+
+    [theImagesByDigest enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+        if ([obj count] > 1)
+            {
+            for (CApertureImage *theImage in obj)
+                {
+                for (NSString *theVersionUUID in theImage.versionUUIDs)
+                    {
+                    ApertureImageVersion *theVersion = [theApplication.imageVersions objectWithID:theVersionUUID];
+                    NSLog(@"SETTING");
+                    theVersion = [theVersion get];
+                    NSDictionary *theProperties = [NSDictionary dictionaryWithObjectsAndKeys:
+                        @"x-duplicate", @"name",
+                        NULL];
+                    ApertureKeyword *theKeyword = [[[theApplication classForScriptingClass:@"keyword"] alloc] initWithProperties:theProperties];
+                    [theVersion.keywords addObject:theKeyword];
+                    }
+                }
+            }
+        }];
+
+
+
+
+//
+
     
 
     return(YES);
