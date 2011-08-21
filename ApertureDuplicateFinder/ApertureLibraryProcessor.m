@@ -118,6 +118,10 @@
         [theStatement enumerateObjectsWithOptions:NSEnumerationConcurrent usingBlock:^(CSqliteRow *row, NSUInteger idx, BOOL *stop) {
             
             NSString *thePath = [row objectForKey:@"imagePath"];
+            if (thePath.length == 0)
+                {
+                return;
+                }
             
             NSURL *theImageURL = [theMastersURL URLByAppendingPathComponent:thePath];
             NSError *theError = NULL;
