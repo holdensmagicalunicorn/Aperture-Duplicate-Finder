@@ -62,6 +62,12 @@
         // Open the aperture library
         NSError *theError = NULL;
         database = [[CSqliteDatabase alloc] initWithURL:theDatabaseURL flags:SQLITE_OPEN_READONLY error:&theError];
+        if (database == NULL)
+            {
+            NSLog(@"COULD NOT OPEN DB: %@", theError);
+            self = NULL;
+            return(self);
+            }
 
         colorSpace = CGColorSpaceCreateWithName(kCGColorSpaceGenericRGB);
 
