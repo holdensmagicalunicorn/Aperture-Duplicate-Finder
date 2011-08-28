@@ -56,7 +56,7 @@ Don't run this on your full Aperture library. That's nuts. Find an album or proj
 
 ## BUGS/TODO
 
-* Need to store the image digests so that we dont have to regenerate them for _all_ images _every_ run. This will allow the user to quit whenever he/she wants.
+* Need to store the image digests so that we don't have to regenerate them for _all_ images _every_ run. This will allow the user to quit whenever he/she wants.
 * Need to have a UI to show the duplicates and give the user the option to bail before we touch the library.
 * Make sure i know what I'm doign with the version vs master stuff.
 
